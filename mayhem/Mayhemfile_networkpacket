@@ -1,0 +1,11 @@
+project: savantenvs/kdeconnect-kde
+target: networkpacket
+
+cmds:
+  - cmd: /mayhem/fuzz_networkpacket
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/networkpacket/testsuite
